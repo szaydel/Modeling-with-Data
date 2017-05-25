@@ -1,0 +1,9 @@
+digraph {
+    rankdir=LR
+    node [shape=box]
+    edge [arrowsize=0.5]
+     "Input\nData" -> "SQL\nDatabase" [label="Appendix B"]
+     "SQL\nDatabase" -> "C Matrix" [label="Ch 3"]
+     "C Matrix" -> "Output\nparameters" [label="Part II"];
+    "C Matrix" -> "Plots\nand graphs" [label="Ch 5"];
+}

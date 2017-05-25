@@ -1,0 +1,52 @@
+This is the sample code and data for the book _Modeling with Data_.
+
+It is not organized into chapters or subjects, because I expect that you
+have a paper or electronic copy of the book on hand. The index
+has a sample code section, for example.
+
+Also, the code here was included in the text of the book verbatim. I
+considered mechanishms for having sections of the code that do not appear
+in the text, but decided that it introduced more chance for error than
+it was worth.
+
+This means that I cheated a bit on style here and there for the sake of
+saving paper. Most notably, because the book documents these programs
+very well, there are almost no comments in the source code presented here.
+This is terrible form for any code that does not have a book attached.
+Nor are there nearly the number of error-checks that one would normally
+include.
+
+All told, writing the examples was a pretty fun exercise. One page of
+the book can hold about 35 lines of code comfortably, and can be pushed
+to 42. Even I was pleasantly surprised by how much 40 lines of C code
+can do. The Game of Life (life.c), the animated model of firm growth
+(normalgrowth.c), the SVD and graphing of state-level data (eigenbox.c +
+eigeneasy.c) are all very nontrivial processes, that are easily
+expressed in under a single page of C code. 
+
+-------------
+All code (C) 2007, 2008 Ben Klemens.
+However, permission is granted to cut/paste, modify, and include this code
+in your own research. If you do use the code, please cite the book. For
+your convenience, here's the entry for a Bibtex/EndNote database:
+
+@book{klemens:modeling,
+author={Ben Klemens},
+title={Modeling with Data},
+year={2008},
+publisher={Princeton University Press}
+}
+
+------------
+All of the data sets are from actual data gathering projects; none is
+made up.
+
+In the USA, raw data can not be copyrighted, but see the end of the book's
+introduction for sources. Note also that almost all of the data sets
+here are abridged. They are thus good data sets for homework exercises,
+but are missing much additional data and important caveats.
+
+In short, have fun with the data, but don't expect to get
+publication-quality results without contacting the original author of
+the data set.
+

@@ -1,0 +1,10 @@
+digraph {
+    rankdir=LR
+    node [shape=box]
+    edge [arrowsize=0.5]
+    {group="top" "Dta1"; "Dta2"}
+     "Parameters" -> "Function" -> "Output" -> "Evaluation" [weight=100];
+    "Dta1" -> "Function" [headport="w"];
+    "Dta2" -> "Evaluation" [headport="w"];
+    "Dta1" -> "Dta2" [style="invis"];
+}

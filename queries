@@ -1,0 +1,66 @@
+
+Page 75:
+ select *  from pop  where population <= 50;
+
+Page 78:
+ select *  from gdp  where country in ('United States', 'China')
+
+Page 78:
+ select *  from gdp  where gdp between 10000 and 20000
+
+Page 79:
+ select distinct line  from lines;
+
+Page 80:
+ select count(*) as row_ct  from gdp;
+
+Page 80:
+ select class, count(*) as countries_per_class  from classes  group by class;
+
+Page 80:
+ select race, avg(tattoos.'ct tattoos ever had')  from tattoos  group by race;
+
+Page 81:
+ select distinct race, tattoos.'year of birth' as birthyear, count(*) as weight  from tattoos  group by race, birthyear; 
+
+Page 81:
+ select distinct race, tattoos.'year of birth' as birthyear, count(*) as weight  from tattoos  group by race, birthyear  having weight > 4; 
+
+Page 82:
+ select *  from pop  order by country
+
+Page 82:
+ select *  from pop  limit 20
+
+Page 82:
+ select *  from pop  limit 5 offset 3
+
+Page 83:
+ begin;  create table newtab(name, age);  insert into newtab values("Joe", 12);  insert into newtab values("Jill", 14);  insert into newtab values("Bob", 14);  commit; 
+
+Page 84:
+ create table tourist_traps as  select country  from lonely_planet  where pp+0.0 > 600  
+
+Page 85:
+ delete from gdp  where gdp='..'
+
+Page 86:
+ update pop  set population=26783  where country='Iraq'
+
+Page 87:
+ select pop.country, pop.population, gdp.GDP  from pop, gdp  where pop.country = gdp.country 
+
+Page 88:
+ select R.year+R.month/12., R.temp - L.temp  from temp L, temp R  where R.year*12 +R.month = L.year*12 +L.month +1;
+
+Page 89:
+ select L.temp - R.temp  from temp L, temp R  where R.rowid+0.0=L.rowid-1; 
+
+Page 90:
+ create table temptab as  select count(*) as ct  from classes  group by class;  select avg(ct)  from temptab 
+
+Page 90:
+ select avg(ct)  from (select count(*) as ct  from classes  group by class) 
+
+Page 91:
+ select *  from gdp  where country in (select country from pop where population > 270) 

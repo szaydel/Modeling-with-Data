@@ -1,0 +1,15 @@
+DOCNAME = a_report
+
+pdf:	$(DOCNAME).pdf
+
+$(DOCNAME).dvi: $(DOCNAME).tex
+	latex $(DOCNAME); latex $(DOCNAME)
+
+$(DOCNAME).ps: $(DOCNAME).dvi
+	dvips  -f < $(DOCNAME).dvi > $(DOCNAME).ps
+
+$(DOCNAME).pdf: $(DOCNAME).ps
+	ps2pdf $(DOCNAME).ps  $(DOCNAME).pdf
+
+clean:
+	rm -f $(DOCNAME).blg $(DOCNAME).log $(DOCNAME).ps
